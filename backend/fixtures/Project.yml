@@ -1,0 +1,8 @@
+entity: Project
+connectedFields: ['address']
+items:
+  project1:
+    id: 'test-project-id-($current)'
+    name: '{{word.noun}}'
+    notes: '{{random.words}}'
+    address: '@address1'

@@ -1,0 +1,8 @@
+entity: Address
+processor: ./processors/AddressProcessor
+items:
+  address1:
+    line1: '{{address.streetAddress}}'
+    city: '{{address.city}}'
+    state: '{{address.stateAbbr}}'
+    zip: !!str '{{address.zipCodeByState("CA")}}'

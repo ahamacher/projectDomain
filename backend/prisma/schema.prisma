@@ -1,0 +1,18 @@
+model Project {
+  id             String                @id
+  name           String
+  notes          String
+  address        Address               @relation(fields: [addressId], references: [id], onDelete: Cascade)
+  addressId      String                @unique
+  journalEntries ProjectJournalEntry[]
+}
+
+model Address {
+  id      String   @id @default(uuid())
+  line1   String
+  line2   String?
+  city    String
+  state   String
+  zip     String
+  project Project?
+}
